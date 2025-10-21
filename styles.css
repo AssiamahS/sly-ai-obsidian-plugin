@@ -1,0 +1,141 @@
+/* Sly.AI Plugin Styles */
+
+.sly-ai-chat-modal {
+    min-width: 600px;
+    min-height: 500px;
+}
+
+.sly-ai-chat-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px 0;
+    padding: 15px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+}
+
+.sly-ai-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.sly-ai-message-user {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    margin-left: 20%;
+}
+
+.sly-ai-message-ai {
+    background: var(--background-modifier-border);
+    margin-right: 20%;
+}
+
+.sly-ai-message-error {
+    background: var(--background-modifier-error);
+    color: var(--text-error);
+}
+
+.sly-ai-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sly-ai-input {
+    flex: 1;
+    min-height: 60px;
+    padding: 10px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Pro Modal */
+.sly-ai-pro-modal h2 {
+    color: var(--interactive-accent);
+    margin-bottom: 10px;
+}
+
+.sly-ai-pro-benefits {
+    background: var(--background-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.sly-ai-pro-benefits ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sly-ai-pro-benefits li {
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.sly-ai-pricing {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--background-primary-alt);
+    border-radius: 8px;
+}
+
+.sly-ai-pricing h3 {
+    margin-bottom: 15px;
+}
+
+.sly-ai-pricing p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.sly-ai-enter-key {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+.sly-ai-enter-key input {
+    text-align: center;
+    font-family: var(--font-monospace);
+    font-size: 13px;
+    padding: 8px;
+}
+
+/* Pro Badge */
+.sly-ai-pro-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Multi-Model Results */
+.sly-ai-multi-results {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.model-result {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--interactive-accent);
+}
+
+.model-result h4 {
+    color: var(--interactive-accent);
+    margin-bottom: 10px;
+}

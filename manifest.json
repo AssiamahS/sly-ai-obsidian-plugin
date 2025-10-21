@@ -1,0 +1,11 @@
+{
+	"id": "sly-ai",
+	"name": "Sly.AI - Local AI Assistant",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Chat with your vault using local AI (Qwen, Llama, Mistral). Code review, smart search, and AI-powered knowledge management.",
+	"author": "Sly.AI (Sylvester Assiamah)",
+	"authorUrl": "https://sly.ai",
+	"fundingUrl": "https://sly.ai/pro",
+	"isDesktopOnly": false
+}
