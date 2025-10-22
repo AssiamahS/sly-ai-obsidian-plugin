@@ -28,7 +28,7 @@ interface SlyAISettings {
 
 const DEFAULT_SETTINGS: SlyAISettings = {
 	apiEndpoint: 'http://localhost:11434/api/generate', // Ollama default
-	modelName: 'qwen2.5:latest',
+	modelName: 'qwen3:8b',
 	licenseKey: '',
 	isPro: false,
 	enableCodeReview: false,
@@ -589,9 +589,9 @@ class SlyAISettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Model Name')
-			.setDesc('Default AI model to use')
+			.setDesc('Recommended: qwen3:8b (balanced), qwen2.5-coder:7b (code), qwen2.5:14b (quality)')
 			.addText(text => text
-				.setPlaceholder('qwen2.5:latest')
+				.setPlaceholder('qwen3:8b')
 				.setValue(this.plugin.settings.modelName)
 				.onChange(async (value) => {
 					this.plugin.settings.modelName = value;

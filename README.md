@@ -52,12 +52,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 ### 2. Install AI Models
 
 ```bash
-# Install Qwen (recommended)
-ollama pull qwen2.5:latest
+# Install Qwen 3 8B (recommended - best balance)
+ollama pull qwen3:8b
 
-# Optional: Install more models
-ollama pull llama3:latest
-ollama pull mistral:latest
+# Optional: Install specialized models
+ollama pull qwen2.5-coder:7b  # Better for code review
+ollama pull qwen2.5:14b        # Higher quality (needs 16GB+ RAM)
+ollama pull llama3:latest      # Alternative model
 ```
 
 ### 3. Install Sly.AI Plugin
@@ -80,8 +81,10 @@ ollama pull mistral:latest
 
 1. Open Settings → Sly.AI
 2. Verify API endpoint: `http://localhost:11434/api/generate`
-3. Set model name: `qwen2.5:latest`
+3. Verify model name: `qwen3:8b` (default)
 4. Click "Test Connection" to verify
+
+**Model already set correctly!** The plugin defaults to `qwen3:8b` for best performance.
 
 ## 📖 Usage
 
@@ -139,13 +142,29 @@ ollama pull mistral:latest
 - Ollama (or compatible local LLM server)
 - Any Ollama-compatible model (Qwen, Llama, Mistral, etc.)
 
-### Supported Models
+### Recommended Models
 
-- Qwen 2.5 (recommended)
-- Llama 3
-- Mistral
-- Code Llama
-- Any Ollama-compatible model
+| Model | RAM Needed | Speed | Quality | Best For |
+|-------|------------|-------|---------|----------|
+| **qwen3:8b** ⭐ | 8GB | Fast | Excellent | General use (default) |
+| **qwen2.5-coder:7b** | 7GB | Fast | Excellent | Code review, development |
+| **qwen2.5:14b** | 14GB | Medium | Best | Maximum quality |
+| **qwen2.5:3b** | 4GB | Fastest | Good | Low-end systems |
+| **llama3:latest** | 8GB | Fast | Excellent | Alternative to Qwen |
+
+**Installation:**
+```bash
+# Default (recommended)
+ollama pull qwen3:8b
+
+# For coding
+ollama pull qwen2.5-coder:7b
+
+# For quality (if you have 16GB+ RAM)
+ollama pull qwen2.5:14b
+```
+
+**Any Ollama-compatible model will work!** Change the model in Settings → Sly.AI → Model Name.
 
 ### API
 
